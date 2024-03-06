@@ -10,6 +10,7 @@ const input = document.querySelector("input");
 const boxes = document.querySelector("#boxes");
 
 function createBoxes(amount) {
+  
   destroyBoxes();
   amount = input.value;
   if (amount >= 1 && amount <= 100) { 
@@ -25,9 +26,8 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  while (boxes.firstChild) {
-    boxes.removeChild(boxes.firstChild);
-  }
+ const boxContainer = document.getElementById('boxes');
+ boxContainer.innerHTML = '';
   
 }
 
